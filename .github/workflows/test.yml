@@ -1,0 +1,11 @@
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Markdown Style Guide
+        uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}

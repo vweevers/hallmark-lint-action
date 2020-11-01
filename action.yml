@@ -1,0 +1,12 @@
+name: Hallmark Lint
+description: Lint markdown files with hallmark
+inputs:
+  token:
+    description: GitHub token
+    required: true
+  files:
+    description: Glob patterns of files to lint
+    default: '*.md'
+runs:
+  using: node12
+  main: dist/index.js

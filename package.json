@@ -1,0 +1,52 @@
+{
+  "name": "hallmark-lint-action",
+  "version": "0.0.0",
+  "description": "A GitHub Action to lint markdown files with hallmark",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "test": "standard && depcheck && hallmark",
+    "pack": "ncc build index.js -m",
+    "check-licenses": "npm-consider install --test --production"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@octokit/plugin-retry": "^3.0.3",
+    "@octokit/plugin-throttling": "^3.3.2",
+    "hallmark": "github:vweevers/hallmark"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1",
+    "depcheck": "^1.2.0",
+    "npm-consider": "^1.7.0",
+    "standard": "^16.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vweevers/hallmark-lint-action.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "allowedLicenseTypes": [
+      "publicDomain",
+      "permissive",
+      "protective",
+      "uncategorized"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
+  "keywords": [
+    "action",
+    "hallmark",
+    "lint",
+    "markdown",
+    "remark"
+  ]
+}
