@@ -17,6 +17,10 @@
     token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+## Example
+
+![Example](example.png)
+
 ## Inputs
 
 - `token` (required): GitHub token for creating status checks with annotations
