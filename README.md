@@ -12,7 +12,7 @@
 - name: Checkout
   uses: actions/checkout@v2
 - name: Markdown Style Guide
-  uses: vweevers/hallmark-lint-action@main
+  uses: vweevers/hallmark-lint-action@v1
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
 ```
